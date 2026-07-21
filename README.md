@@ -2,6 +2,8 @@
 A custom simplified version of Calude Code that relies on OpenRouter via the Official 
 OpenAI Python SDK.
 
+**THIS IS FOR LEARNING PURPOSES ONLY**
+
 # Dependencies
 OpenRouter
 Python 3.10+
