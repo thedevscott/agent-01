@@ -1,5 +1,5 @@
 # AI Agent
-A custom simplified version of Calude Code that relies on OpenRouter via the Official 
+A custom simplified code assistant that relies on OpenRouter via the official 
 OpenAI Python SDK.
 
 **THIS IS FOR LEARNING PURPOSES ONLY**
@@ -10,6 +10,9 @@ Python 3.10+
 uv
 
 # Setup
+## .env file
+  OPENROUTER_API_KEY='key'
+
 ## OpenRouter
 * Create an account on OpenRouter.
 * Go to the Keys page and Create a Key. Give it a name like ai-agent.
