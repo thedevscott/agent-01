@@ -2,6 +2,27 @@ import os
 import subprocess
 
 
+schema_run_python_file = {
+    "type": "function",
+    "function": {
+        "name": "run_python_file",
+        "description": "Executes python files with optional arguments",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "file_path": {
+                    "type": "string",
+                    "description": "Python file path to execute, relative to the working directory (default is the working directory itself)",
+                },
+                "args": {
+                    "type": "string",
+                    "description": "Command line arguments for the Python file being exeuted/ran",
+                },
+            },
+        },
+    },
+}
+
 def run_python_file(
     working_directory: str, file_path: str, args: list[str] | None = None
 ) -> str:
@@ -19,7 +40,7 @@ def run_python_file(
         
         if not file_path.endswith(".py"):
             return f'Error: "{file_path}" is not a Python file'
-            
+
         command = ["python", target_path]
         if args:
             command.extend(args)

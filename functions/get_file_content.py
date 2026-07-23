@@ -5,6 +5,23 @@ try:
 except Exception:
     MAX_FILE_CHARS = 10000
 
+schema_get_file_content = {
+    "type": "function",
+    "function": {
+        "name": "get_file_content",
+        "description": "Read the file contents relative to the working directory",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "file_path": {
+                    "type": "string",
+                    "description": "File path to read contents from, relative to the working directory (default is the working directory itself)",
+                },
+            },
+        },
+    },
+}
+
 def get_file_content(working_directory: str, file_path: str) -> str:
     try:
         working_dir_abs = os.path.abspath(working_directory)
